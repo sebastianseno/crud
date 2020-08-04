@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_lanscape"
+    app:startDestination="@id/detailFragment">
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.sebastianseno.crudapps.ui.goods.GoodsDetailFragment"
+        android:label=""
+        tools:layout="@layout/fragment_goods_detail">
+
+        <argument
+            android:name="goodsData"
+            app:argType="integer" />
+
+    </fragment>
+</navigation>

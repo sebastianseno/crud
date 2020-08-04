@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.sebastianseno.crudapps.ui.goods.GoodsListFragment"
+        android:label="Order Barang"
+        tools:layout="@layout/fragment_goods_list">
+
+        <action
+            android:id="@+id/actionDetailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_listFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.sebastianseno.crudapps.ui.goods.GoodsDetailFragment"
+        android:label=""
+        tools:layout="@layout/fragment_goods_detail">
+
+        <argument
+            android:name="goodsData"
+            app:argType="integer" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.sebastianseno.crudapps.ui.goods.AddGoodsFragment"
+        android:label="Tambah Barang"
+        tools:layout="@layout/fragment_add_goods" />
+</navigation>
